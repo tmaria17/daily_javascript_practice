@@ -5,10 +5,10 @@ class Medusa {
   }
 
   stare(victim){
-    this.statues.push(victim);
+    this.statues.push(victim)
     victim.stoned = true;
     if (this.statues.length > 3) {
-      victim = this.statues.shift()
+      victim = this.statues.shift();
       victim.stoned = false;
     }
   }

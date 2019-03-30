@@ -53,35 +53,19 @@ describe('Medusa', function() {
   });
 
   it('should unstone the the first victim and stone the 4th coming in', function() {
-    // create medusa
     var medusa = new Medusa('Meeka');
     var victim1 = new Person('Lousia');
     var victim2 = new Person('Bree');
     var victim3 = new Person('TayTay');
     var victim4 = new Person('Steve');
-    // create first victim
-    // create second victim
-    // create third victim
-    // create fourth victim
 
-    // medusa stares at first victim
-    medusa.stare(victim1);
-    medusa.stare(victim2);
-    medusa.stare(victim3);
-    medusa.stare(victim4);
-    // assert that the first victim is stoned
-    assert.equal(victim1.stoned, true);
-    assert.equal(victim4.stoned, true);
-
-
-    // medusa stares at second victim
-    // medusa stares at third victim
-    // medusa stares at fourth victim
-    // assert the fourth victim is stoned
-
-    // assert that the first victim is not stoned
-    assert.equal(victim1.stoned, false);
-
+    medusa.stare(victim1)
+    assert.equal(victim1.stoned, true)
+    medusa.stare(victim2)
+    medusa.stare(victim3)
+    medusa.stare(victim4)
+    assert.equal(victim4.stoned, true)
+    assert.equal(victim1.stoned, false)
   });
 })
 
@@ -101,7 +85,7 @@ describe('Person', function() {
     assert.equal(person.name, 'Steve');
   });
 
-  it.skip('should be stoned after looking into Medusas eyes', function() {
+  it('should be stoned after looking into Medusas eyes', function() {
     var medusa = new Medusa('Brenna');
     var victim = new Person('Jhun');
 
